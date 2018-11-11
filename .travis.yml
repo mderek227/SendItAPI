@@ -1,0 +1,27 @@
+language: python
+python:
+- '3.5.2'
+sudo: false
+cache: pip3
+install:
+- pip install -r requirements.txt
+script:
+- pytest --cov=.
+- coverage
+- coveralls
+- coverage report
+after_success:
+- coveralls
+
+deploy:
+  provider: heroku
+  api_key: ...
+  on: develop
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $Ga9aGK3qei0qHnWbYDO1oQ
+  keep-history: true
+  on:
+    branch: master
