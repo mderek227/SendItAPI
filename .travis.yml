@@ -15,13 +15,5 @@ after_success:
 
 deploy:
   provider: heroku
-  api_key: ...
-  on: develop
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $Ga9aGK3qei0qHnWbYDO1oQ
-  keep-history: true
-  on:
-    branch: master
+  api_key: D6u84XeqzfhMMXaVzx3ptRpD7KeVF0RJu
+  on: api
