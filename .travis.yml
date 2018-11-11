@@ -12,8 +12,3 @@ script:
 - coverage report
 after_success:
 - coveralls
-
-deploy:
-  provider: heroku
-  api_key: D6u84XeqzfhMMXaVzx3ptRpD7KeVF0RJu
-  on: api
